@@ -1,10 +1,10 @@
-🚀 Advanced Prompt Engineering & LLM Evaluation
+#🚀 Advanced Prompt Engineering & LLM Evaluation
 
 A practical repository for exploring Prompt Engineering, Large Language Models (LLMs), text generation, and automated NLP evaluation.
 
 This project demonstrates different prompting strategies and provides evaluation scripts to measure the quality and semantic similarity of generated text.
 
-📌 Overview
+#📌 Overview
 
 Prompt engineering plays an important role in improving the quality, consistency, and controllability of Large Language Model outputs.
 
@@ -32,7 +32,7 @@ Automated NLP evaluation
 
 The repository also includes implementations of commonly used evaluation metrics such as BLEU, ROUGE, METEOR, and BERTScore.
 
-📂 Project Structure
+#📂 Project Structure
 prompt-engineering/
 │
 ├── BERTscore.py          # BERTScore evaluation
@@ -49,8 +49,8 @@ prompt-engineering/
 │
 └── README.md
 
-🧠 Prompt Engineering Techniques
-1. Zero-Shot Prompting
+#🧠 Prompt Engineering Techniques
+##1. Zero-Shot Prompting
 
 Zero-shot prompting asks the model to perform a task without providing examples.
 
@@ -63,7 +63,7 @@ Classify the following text as positive, negative, or neutral:
 
 This technique is useful for testing a model's baseline capabilities.
 
-2. One-Shot Prompting
+##2. One-Shot Prompting
 
 One-shot prompting provides the model with a single example before asking it to perform the task.
 
@@ -77,7 +77,7 @@ Text: "The product is excellent."
 
 One-shot prompting can help establish the expected format and behavior.
 
-3. Few-Shot Prompting
+##3. Few-Shot Prompting
 
 Few-shot prompting provides multiple examples to guide the model.
 
@@ -96,7 +96,7 @@ Text: "The camera quality is excellent."
 
 This approach is useful when a task requires more precise formatting or behavior.
 
-4. Open-Ended Prompting
+##4. Open-Ended Prompting
 
 Open-ended prompts allow the model to generate flexible responses.
 
@@ -114,7 +114,7 @@ Content generation
 
 Research assistance
 
-5. Closed-Ended Prompting
+##5. Closed-Ended Prompting
 
 Closed-ended prompts constrain the model's response to a predefined format or set of choices.
 
@@ -128,7 +128,7 @@ Binary decisions
 
 Information extraction
 
-🌍 Multilingual Story Generation
+#🌍 Multilingual Story Generation
 
 The repository includes a multilingual story generation example.
 
@@ -148,13 +148,13 @@ Narrative style
 
 This demonstrates how prompt structure can be used to control creative LLM outputs.
 
-📊 LLM Evaluation
+#📊 LLM Evaluation
 
 Generating text is only one part of working with LLMs. Evaluating the generated output is also important.
 
 This repository includes several NLP evaluation metrics.
 
-BLEU
+##BLEU
 
 BLEU (Bilingual Evaluation Understudy) evaluates generated text by comparing n-gram overlap between the generated output and a reference text.
 
@@ -162,7 +162,7 @@ File:
 
 BLEUscore.py
 
-ROUGE
+##ROUGE
 
 ROUGE (Recall-Oriented Understudy for Gisting Evaluation) measures overlap between generated and reference text and is commonly used for summarization evaluation.
 
@@ -170,7 +170,7 @@ File:
 
 ROUGEscore.py
 
-METEOR
+##METEOR
 
 METEOR evaluates generated text using word-level matching while also considering factors such as stemming and synonyms.
 
@@ -178,7 +178,7 @@ File:
 
 METEOR.PY
 
-BERTScore
+##BERTScore
 
 BERTScore uses contextual embeddings to compare the semantic similarity between generated text and reference text.
 
@@ -189,7 +189,7 @@ BERTscore.py
 
 Unlike simple lexical-overlap metrics, BERTScore can capture semantic similarities between different wordings.
 
-🔄 Evaluation Workflow
+#🔄 Evaluation Workflow
 
 A typical workflow using this repository is:
 
@@ -210,7 +210,7 @@ Prompt Optimization
 
 This allows prompts to be iteratively improved based on measurable results.
 
-🛠️ Technologies
+#🛠️ Technologies
 
 The project is primarily implemented using:
 
@@ -232,12 +232,12 @@ METEOR
 
 BERTScore
 
-🚀 Getting Started
-1. Clone the Repository
+#🚀 Getting Started
+##1. Clone the Repository
 git clone https://github.com/ranjithreddy55/prompt-engineering.git
 cd prompt-engineering
 
-2. Create a Virtual Environment
+##2. Create a Virtual Environment
 python -m venv venv
 
 
@@ -250,7 +250,7 @@ On Linux/macOS:
 
 source venv/bin/activate
 
-3. Install Dependencies
+##3. Install Dependencies
 
 Install the required Python packages according to the imports used by the individual scripts.
 
@@ -261,7 +261,7 @@ pip install nltk rouge-score bert-score sentence-transformers
 
 Additional dependencies may be required depending on the LLM or API used by a particular script.
 
-4. Run an Example
+##4. Run an Example
 
 For example:
 
@@ -280,7 +280,7 @@ python ROUGEscore.py
 python METEOR.PY
 python BERTscore.py
 
-🎯 Learning Objectives
+#🎯 Learning Objectives
 
 This repository can be used to learn:
 
@@ -300,7 +300,7 @@ How lexical and semantic evaluation metrics differ
 
 How to iteratively improve prompts using evaluation results
 
-🔬 Future Improvements
+#🔬 Future Improvements
 
 Potential extensions include:
 
@@ -330,35 +330,17 @@ Add experiment tracking
 
 Add support for additional LLM providers
 
-🤝 Contributing
-
-Contributions are welcome.
-
-You can contribute by:
-
-Forking the repository
-
-Creating a new branch
-
-Adding or improving prompt examples
-
-Adding evaluation techniques
-
-Testing your changes
-
-Creating a pull request
-
-📄 License
+#📄 License
 
 This project is licensed under the MIT License.
 
-👨‍💻 Author
+#👨‍💻 Author
 
 Ranjith Reddy
 
 GitHub:
 https://github.com/ranjithreddy55
 
-⭐ Support
+#⭐ Support
 
 If you find this repository useful for learning Prompt Engineering and LLM evaluation, consider giving it a ⭐ on GitHub.
