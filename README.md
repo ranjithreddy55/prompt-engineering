@@ -1,14 +1,14 @@
-#🚀 Advanced Prompt Engineering & LLM Evaluation
+🚀 Advanced Prompt Engineering & LLM Evaluation
 
-A practical repository for exploring Prompt Engineering, Large Language Models (LLMs), text generation, and automated NLP evaluation.
+A practical repository for exploring Prompt Engineering, Large Language Models (LLMs), text generation, embeddings, and automated NLP evaluation.
 
-This project demonstrates different prompting strategies and provides evaluation scripts to measure the quality and semantic similarity of generated text.
+This project demonstrates different prompting techniques and evaluation methods for understanding and improving the quality of Large Language Model outputs.
 
-#📌 Overview
+📌 Overview
 
-Prompt engineering plays an important role in improving the quality, consistency, and controllability of Large Language Model outputs.
+Prompt Engineering is the process of designing and optimizing prompts to guide Large Language Models toward producing useful, accurate, and consistent responses.
 
-This repository contains examples of:
+This repository contains practical examples covering:
 
 Zero-shot prompting
 
@@ -28,11 +28,19 @@ Multilingual story generation
 
 Adversarial prompting
 
-Automated NLP evaluation
+LLM output evaluation
 
-The repository also includes implementations of commonly used evaluation metrics such as BLEU, ROUGE, METEOR, and BERTScore.
+The repository also includes implementations of popular NLP evaluation metrics such as:
 
-#📂 Project Structure
+BLEU
+
+ROUGE
+
+METEOR
+
+BERTScore
+
+📂 Project Structure
 prompt-engineering/
 │
 ├── BERTscore.py          # BERTScore evaluation
@@ -43,43 +51,61 @@ prompt-engineering/
 ├── adversial.py          # Adversarial prompting examples
 ├── closedended.py        # Closed-ended prompting
 ├── openended.py          # Open-ended prompting
-├── prompttemplate.py     # Reusable prompt templates
+├── prompttemplate.py     # Prompt template examples
 ├── embeddings.py         # Text embedding examples
 ├── storygenerator.py     # Multilingual story generation
 │
-└── README.md
+└── README.md             # Project documentation
 
-#🧠 Prompt Engineering Techniques
-##1. Zero-Shot Prompting
+🧠 Prompt Engineering Techniques
+1. Zero-Shot Prompting
 
-Zero-shot prompting asks the model to perform a task without providing examples.
+Zero-shot prompting asks an LLM to perform a task without providing any examples.
 
 Example:
 
-Classify the following text as positive, negative, or neutral:
+Classify the following text as Positive, Negative, or Neutral:
 
 "I really enjoyed this movie."
 
 
-This technique is useful for testing a model's baseline capabilities.
+The model needs to understand the task based only on the instructions provided.
 
-##2. One-Shot Prompting
+Use cases:
+
+Text classification
+
+Sentiment analysis
+
+Summarization
+
+Question answering
+
+Information extraction
+
+2. One-Shot Prompting
 
 One-shot prompting provides the model with a single example before asking it to perform the task.
 
 Example:
+
+Example:
+
 Text: "I love this product."
 Sentiment: Positive
 
 Now classify:
+
 Text: "The product is excellent."
 
 
-One-shot prompting can help establish the expected format and behavior.
+The example helps the model understand the expected task and output format.
 
-##3. Few-Shot Prompting
+3. Few-Shot Prompting
 
 Few-shot prompting provides multiple examples to guide the model.
+
+Example:
 
 Text: "I love this phone."
 Sentiment: Positive
@@ -91,54 +117,90 @@ Text: "The phone is okay."
 Sentiment: Neutral
 
 Now classify:
+
 Text: "The camera quality is excellent."
 
 
-This approach is useful when a task requires more precise formatting or behavior.
+Few-shot prompting is useful when the task requires a specific format or behavior.
 
-##4. Open-Ended Prompting
+4. Open-Ended Prompting
 
-Open-ended prompts allow the model to generate flexible responses.
+Open-ended prompts allow the LLM to generate flexible responses without restricting the answer to predefined options.
 
-Typical applications include:
+Examples include:
 
 Creative writing
 
+Story generation
+
 Brainstorming
 
-Explanation
+Explanations
 
 Summarization
 
 Content generation
 
-Research assistance
+Question answering
 
-##5. Closed-Ended Prompting
+Example:
 
-Closed-ended prompts constrain the model's response to a predefined format or set of choices.
+Write a short story about a student who discovers an ancient technology.
 
-Typical applications include:
+5. Closed-Ended Prompting
+
+Closed-ended prompting restricts the model's response to a specific format, category, or set of choices.
+
+Example:
+
+Is the following statement true or false?
+
+"Python is a programming language."
+
+Answer only with True or False.
+
+
+This approach is useful for:
 
 Classification
 
+Binary decisions
+
 Sentiment analysis
 
-Binary decisions
+Multiple-choice questions
 
 Information extraction
 
-#🌍 Multilingual Story Generation
+📝 Prompt Templates
 
-The repository includes a multilingual story generation example.
+Prompt templates allow reusable instructions to be created for different tasks.
 
-The story generator demonstrates how prompts can be structured to generate narratives in different languages while specifying requirements such as:
+Instead of writing a complete prompt every time, variables can be inserted into a predefined structure.
+
+Example:
+
+You are an expert in {topic}.
+
+Explain {concept} in simple terms
+for a {audience} audience.
+
+
+This makes prompts easier to reuse, maintain, and modify.
+
+The repository contains examples demonstrating prompt template usage.
+
+🌍 Multilingual Story Generation
+
+The project includes a multilingual story-generation example demonstrating how prompts can be used to generate stories in different languages.
+
+The prompt can be structured around parameters such as:
+
+Language
 
 Story theme
 
 Characters
-
-Language
 
 Tone
 
@@ -146,201 +208,34 @@ Length
 
 Narrative style
 
-This demonstrates how prompt structure can be used to control creative LLM outputs.
+Example concept:
 
-#📊 LLM Evaluation
+Generate a short story in Telugu.
 
-Generating text is only one part of working with LLMs. Evaluating the generated output is also important.
+Theme: Artificial Intelligence
+Characters: Student and AI Assistant
+Tone: Inspirational
+Length: 500 words
 
-This repository includes several NLP evaluation metrics.
 
-##BLEU
+This demonstrates how prompt instructions can be used to control the characteristics of generated content.
 
-BLEU (Bilingual Evaluation Understudy) evaluates generated text by comparing n-gram overlap between the generated output and a reference text.
+🔤 Text Embeddings
 
-File:
+The repository also contains an example related to text embeddings.
 
-BLEUscore.py
+Text embeddings represent text as numerical vectors that capture aspects of its semantic meaning.
 
-##ROUGE
+Embeddings can be used for applications such as:
 
-ROUGE (Recall-Oriented Understudy for Gisting Evaluation) measures overlap between generated and reference text and is commonly used for summarization evaluation.
+Semantic similarity
 
-File:
+Text clustering
 
-ROUGEscore.py
+Search
 
-##METEOR
+Recommendation systems
 
-METEOR evaluates generated text using word-level matching while also considering factors such as stemming and synonyms.
+Document comparison
 
-File:
-
-METEOR.PY
-
-##BERTScore
-
-BERTScore uses contextual embeddings to compare the semantic similarity between generated text and reference text.
-
-File:
-
-BERTscore.py
-
-
-Unlike simple lexical-overlap metrics, BERTScore can capture semantic similarities between different wordings.
-
-#🔄 Evaluation Workflow
-
-A typical workflow using this repository is:
-
-Prompt Design
-     ↓
-LLM Generation
-     ↓
-Generated Output
-     ↓
-Reference Output
-     ↓
-Evaluation Metrics
-     ↓
-Quality Analysis
-     ↓
-Prompt Optimization
-
-
-This allows prompts to be iteratively improved based on measurable results.
-
-#🛠️ Technologies
-
-The project is primarily implemented using:
-
-Python
-
-Large Language Models
-
-Natural Language Processing
-
-Prompt Engineering
-
-Text Embeddings
-
-BLEU
-
-ROUGE
-
-METEOR
-
-BERTScore
-
-#🚀 Getting Started
-##1. Clone the Repository
-git clone https://github.com/ranjithreddy55/prompt-engineering.git
-cd prompt-engineering
-
-##2. Create a Virtual Environment
-python -m venv venv
-
-
-Activate it on Windows:
-
-venv\Scripts\activate
-
-
-On Linux/macOS:
-
-source venv/bin/activate
-
-##3. Install Dependencies
-
-Install the required Python packages according to the imports used by the individual scripts.
-
-For example:
-
-pip install nltk rouge-score bert-score sentence-transformers
-
-
-Additional dependencies may be required depending on the LLM or API used by a particular script.
-
-##4. Run an Example
-
-For example:
-
-python openended.py
-
-
-or:
-
-python storygenerator.py
-
-
-Evaluation scripts can be executed similarly:
-
-python BLEUscore.py
-python ROUGEscore.py
-python METEOR.PY
-python BERTscore.py
-
-#🎯 Learning Objectives
-
-This repository can be used to learn:
-
-How prompt structure affects LLM outputs
-
-Differences between zero-shot, one-shot, and few-shot prompting
-
-How to design reusable prompt templates
-
-How to control LLM-generated content
-
-How embeddings represent text semantically
-
-How to evaluate generated text
-
-How lexical and semantic evaluation metrics differ
-
-How to iteratively improve prompts using evaluation results
-
-#🔬 Future Improvements
-
-Potential extensions include:
-
-Add Chain-of-Thought prompting examples
-
-Add Role-Based prompting
-
-Add ReAct prompting
-
-Add structured JSON output examples
-
-Add function/tool calling examples
-
-Add prompt comparison experiments
-
-Add automated prompt evaluation
-
-Add visualization of evaluation scores
-
-Add a requirements.txt file
-
-Add sample datasets
-
-Add unit tests
-
-Add experiment tracking
-
-Add support for additional LLM providers
-
-#📄 License
-
-This project is licensed under the MIT License.
-
-#👨‍💻 Author
-
-Ranjith Reddy
-
-GitHub:
-https://github.com/ranjithreddy55
-
-#⭐ Support
-
-If you find this repository useful for learning Prompt Engineering and LLM evaluation, consider giving it a ⭐ on GitHub.
+Retrieval-Aug
